@@ -1,0 +1,81 @@
+/*---------------*
+ * Layout
+ *---------------*/
+
+/* Mobile layout */
+#main-grid{
+    display: grid;
+    padding: 25px;
+    grid-template-columns: 60px 60px 60px 60px;
+    grid-template-rows: 10vh 10vh 25vh 10vh;
+    offset: 0px;
+    grid-gap: 25px;
+    grid-template-areas:
+        "hd hd hd hd hd hd hd hd hd hd hd hd hd"
+        "nav nav nav nav nav nav nav nav nav nav nav nav nav"
+        "mc mc mc mc mc mc mc mc mc mc mc mc mc"
+        "mc mc mc mc mc mc mc mc mc mc mc mc mc"
+        "mc mc mc mc mc mc mc mc mc mc mc mc mc"
+        "ft ft ft ft ft ft ft ft ft ft ft ft ft";
+}
+
+header{
+    grid-area: hd;
+}
+
+main{
+    display: flex;
+    grid-area: mc;
+}
+
+nav{
+    grid-area: nav;
+}
+
+footer{
+    grid-area: ft;
+}
+
+/* Desktop layout */
+@media(min-width: 1440px){
+
+    #main-grid{
+        grid-template-columns: repeat(12, 60px);
+        grid-template-rows: 20vh 20vh 20vh 20vh;
+        offset: 0;
+        padding: 0;
+        grid-template-areas:
+                "hd hd hd hd hd hd hd hd hd hd hd hd hd hd hd"
+                "mc mc mc mc mc mc mc mc mc mc mc mc mc mc nav"
+                "mc mc mc mc mc mc mc mc mc mc mc mc mc mc nav"
+                "mc mc mc mc mc mc mc mc mc mc mc mc mc mc nav"
+                "ft ft ft ft ft ft ft ft ft ft ft ft ft ft ft";
+    }
+
+    header{
+        grid-area: hd;
+    }
+
+    main{
+        grid-area: mc;
+    }
+
+    nav{
+        grid-area: nav;
+    }
+
+    footer{
+        grid-area: ft;
+    }
+}
+
+/*---------------*
+ * Typography
+ *---------------*/
+
+h1{
+    font-size: 48px;
+    font-family: "Barlow", "Helvetica", "Arial", sans-serif;
+    font-weight: 300;
+}
+
